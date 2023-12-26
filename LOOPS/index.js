@@ -1,17 +1,13 @@
-let spaceship = prompt("Dingite o nome da nave")
+let spaceshipName = prompt("Qual é o nome da nave")
 
-let charToReplace = prompt("Qual caractere você deseja substituir?")
+let invertedName = ""
 
-let replacementChar = prompt("Por qual caractere você deseja substituir?")
-
-let newSpaceship = ""
-
-for (let pos = 0; pos < spaceship.length; pos++) {
-   if(spaceship[pos] == charToReplace) {
-    newSpaceship += replacementChar
-   } else {
-    newSpaceship += spaceship[pos]
+for(let i = spaceshipName.length - 1; i >= 0; i--) {
+   if(spaceshipName[i] == "e") {
+      break
    }
+   invertedName += spaceshipName[i]
+   
 }
 
-alert("O novo nome da nave é " + newSpaceship)
+alert("Nome original da nave: " + spaceshipName + "\nNome após ocultação: " + invertedName)
